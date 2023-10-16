@@ -1,0 +1,22 @@
+﻿@model CalcVal
+
+<h3>@Model.Month Information</h3>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Month</th>
+        <th>Monthly Income</th>
+        <th>Total Cost</th>
+    </tr>
+    <tr>
+        <td>@Model.MonthID</td>
+        <td>@Model.Month</td>
+        <td>@Model.MonthlyIncome</td>
+        <td>@Model.TotalCost</td>
+    </tr>
+</table>
+
+<div style="display: block">
+    <a href="/MoneyMan/UpdateCalc/@Model.MonthID">Update this Product</a>
+</div>

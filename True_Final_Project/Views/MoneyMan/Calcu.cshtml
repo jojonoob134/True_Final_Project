@@ -1,0 +1,22 @@
+﻿@model IEnumerable<CalcVal>
+
+<h2>Calculations</h2>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Month</th>
+        <th>Monthly Income</th>
+        <th>Total Cost</th>
+    </tr>
+
+    @foreach (var calc in @Model)
+    {
+        <tr>
+            <td><a href=/MoneyMan/ViewCalc/@calc.MonthID>@calc.MonthID</a></td>
+            <td>@calc.Month</td>
+            <td>@calc.TotalCost</td>
+            <td>@calc.MonthlyIncome</td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,15 @@
+﻿@model CalcVal
+
+<h2>Update @Model.Month</h2>
+
+@using (Html.BeginForm("UpdateCalcValToDatabase", "MoneyMan", "Post"))
+{
+    <input asp-for="MonthID" type="hidden" value="@Model.MonthID" />
+
+    <input asp-for="TotalCost" type="hidden" value="@Model.TotalCost" />
+
+    <label asp-for="MonthlyIncome" class="control-label">Monthly Income</label>
+    <input type="text" name="MonthlyIncome" class="form-control" value="@Model.MonthlyIncome" />
+
+    <input type="submit" value="Update CalcVal" class="btn btn-primary" />
+}
