@@ -11,4 +11,8 @@
     <PackageReference Include="MySql.Data" Version="8.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\memes\stonks.jpg" />
+  </ItemGroup>
+
 </Project>

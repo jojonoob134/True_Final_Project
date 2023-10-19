@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zBeQN2E96/4dhELolAGtab6mer2A5PKcuhMMHXXUlZc=",
+  "Hash": "vKssrRt/VO9V8ioMFU8ItIHqYlTTsXfxdecQdKyj5S4=",
   "Source": "True_Final_Project",
   "BasePath": "_content/True_Final_Project",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\jojon\\OneDrive\\Desktop\\repos\\True_Final_Project\\True_Final_Project\\wwwroot\\memes\\stonks.jpg",
+      "SourceId": "True_Final_Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jojon\\OneDrive\\Desktop\\repos\\True_Final_Project\\True_Final_Project\\wwwroot\\",
+      "BasePath": "_content/True_Final_Project",
+      "RelativePath": "memes/stonks.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\memes\\stonks.jpg"
     }
   ]
 }

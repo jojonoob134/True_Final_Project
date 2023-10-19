@@ -3,11 +3,11 @@ using True_Final_Project.Models;
 
 namespace True_Final_Project.Controllers
 {
-    public class PlaceHolder2Controller : Controller
+    public class TrackerController : Controller
     {
         private readonly ICalculations repo;
 
-        public PlaceHolder2Controller(ICalculations repo)
+        public TrackerController(ICalculations repo)
         {
             this.repo = repo;
         }

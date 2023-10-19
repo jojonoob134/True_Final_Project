@@ -1,0 +1,27 @@
+﻿@model IEnumerable<CostVal>
+
+<h2>purches name</h2>
+
+<div style="display: block">
+    <a href="/Tracker/InsertCost/" style="color: lightgreen;">Create a New Cost</a>
+</div>
+
+<table class="table">
+    <tr>
+        <th style="color: lightgreen;">ID</th>
+        <th style="color: lightgreen;">Month</th>
+        <th style="color: lightgreen;">name</th>
+        <th style="color: darkred;">Cost</th>
+    </tr>
+
+    @foreach (var cost in @Model)
+    {
+        <tr>
+            <td><a href="/Tracker/ViewCost/@cost.PurchesID" style="color: lightgreen;">@cost.PurchesID</a></td>
+            <td style="color: lightgreen;">@cost.Month</td>
+            <td style="color: lightgreen;">@cost.PurchesName</td>
+            <td style="color: darkred;">@cost.Cost</td>
+        </tr>
+    }
+
+</table>

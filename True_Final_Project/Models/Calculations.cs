@@ -25,12 +25,12 @@ namespace True_Final_Project.Models
         }
 
         public void UpdateCalc(CalcVal calc)
-        {
-            //_conn.Execute("UPDATE calculating_chart SET totalCost = (SELECT SUM(Cost) FROM cost_chart WHERE cost_chart.month = @month)",
-            _conn.Execute("UPDATE calculating_chart AS cc SET cc.totalCost = (SELECT SUM(ccc.Cost) FROM cost_chart AS ccc WHERE ccc.month = @month)",
-                new { month = calc.Month });
-            _conn.Execute("UPDATE calculating_chart SET MonthlyIncome = @MonthlyIncome",
-                new { MonthlyIncome = calc.MonthlyIncome });
+        { 
+            _conn.Execute("UPDATE calculating_chart cc JOIN (SELECT Month, SUM(Cost) as total FROM cost_chart GROUP BY Month)" +
+                " ccc ON cc.Month = ccc.Month SET cc.TotalCost = ccc.total;",
+                new { month = calc.Month, id = calc.Month });
+            _conn.Execute("UPDATE calculating_chart SET MonthlyIncome = @MonthlyIncome WHERE MonthID = @id",
+                new { MonthlyIncome = calc.MonthlyIncome, id = calc.MonthID });
         }
 
         public IEnumerable<CostVal> GetAllCost()
