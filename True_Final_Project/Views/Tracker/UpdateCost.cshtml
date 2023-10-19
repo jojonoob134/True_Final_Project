@@ -15,10 +15,15 @@
     <div class="form-group">
         <label for="">Select a Month</label>
         <select class="form-control" name="Month" value="">
-            @foreach (var mon in Model.Months)
+
+            @if(Model.Months != null)
             {
-                <option value="@mon.Month">@mon.MonthID @mon.Month</option>
+                @foreach (Months mon in Model.Months)
+                {
+                    <option value="@mon.Month">@mon.MonthID @mon.Month</option>
+                }
             }
+           
         </select>
     </div>
 

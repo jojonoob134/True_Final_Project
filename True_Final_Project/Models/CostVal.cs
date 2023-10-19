@@ -7,6 +7,6 @@
         public string PurchesName { get; set; }
         public double Cost { get; set; }
 
-        public IEnumerable<Months> Months { get; set; }
+        public IEnumerable<Months> Months { get; set; } //= new List<Months>() { new Models.Months { Month = "January", MonthID = 1} };
     }
 }

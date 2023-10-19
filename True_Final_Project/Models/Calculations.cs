@@ -44,8 +44,8 @@ namespace True_Final_Project.Models
         }
         public void UpdateCost(CostVal cost)
         {
-            _conn.Execute("UPDATE cost_chart SET PurchesName = @purchesName, Cost = @cost WHERE PurchesID = @id",
-                new { purchesName = cost.PurchesName, cost = cost.Cost, id = cost.PurchesID });
+            _conn.Execute("UPDATE cost_chart SET PurchesName = @purchesName, Cost = @cost, Month = @month WHERE PurchesID = @id",
+                new { purchesName = cost.PurchesName, cost = cost.Cost, month = cost.Month, id = cost.PurchesID });
         }
 
         public void InsertCostVal(CostVal CostToInsert)

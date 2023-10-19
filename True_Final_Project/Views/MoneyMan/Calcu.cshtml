@@ -5,8 +5,8 @@
     <tr>
         <th style="color: lightgreen;">ID</th>
         <th style="color: lightgreen;">Month</th>
-        <th style="color: lightgreen;">Monthly Income</th>
-        <th style="color: darkred;">Total Cost</th>
+		<th style="color: lightgreen;">Total Cost</th>
+		<th style="color: darkred;">Monthly Income</th>
     </tr>
 
     @foreach (var calc in @Model)
@@ -15,7 +15,7 @@
             <td><a href="/MoneyMan/ViewCalc/@calc.MonthID" style="color: lightgreen;">@calc.MonthID</a></td>
             <td style ="color: lightgreen;">@calc.Month</td>
             <td style="color: lightgreen">@calc.TotalCost</td>
-            <td style="color: darkred">@calc.MonthlyIncome</td>
+            <td style="color: darkred">@calc.MonthlyIncome </td>
         </tr>
     }
 

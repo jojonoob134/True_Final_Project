@@ -31,6 +31,7 @@ namespace True_Final_Project.Controllers
             {
                 return View("CostNotFound");
             }
+            cost.Months = repo.GetMonths();
             return View(cost);
         }
 
