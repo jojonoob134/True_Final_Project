@@ -56,5 +56,11 @@ namespace True_Final_Project.Controllers
             repo.DeleteCost(cost);
             return RedirectToAction("Index");
         }
+
+        public IActionResult DeleteAllMonthCost(CostVal cost)
+        {
+            repo.DeleteAllMonthCost(cost);
+            return RedirectToAction("Index");
+        }
     } 
 }

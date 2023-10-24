@@ -18,6 +18,8 @@
 
         public void DeleteCost(CostVal cost);
 
+        public void DeleteAllMonthCost(CostVal cost);
+
     }
 
 }

@@ -33,6 +33,7 @@ namespace True_Final_Project.Models
                 new { MonthlyIncome = calc.MonthlyIncome, id = calc.MonthID });
         }
 
+
         public IEnumerable<CostVal> GetAllCost()
         {
             return _conn.Query<CostVal>("SELECT * FROM cost_chart;");
@@ -71,6 +72,11 @@ namespace True_Final_Project.Models
         public void DeleteCost(CostVal cost)
         {
             _conn.Execute("DELETE FROM cost_chart WHERE PurchesID = @id;", new { id = cost.PurchesID });
+        }
+
+        public void DeleteAllMonthCost(CostVal cost)
+        {
+            _conn.Execute("DELETE FROM cost_chart WHERE Month = @when;", new { when = cost.Month });
         }
     }
 }
